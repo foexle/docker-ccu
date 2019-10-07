@@ -13,6 +13,21 @@
 #ssh Port
 : ${CCU_SSH_PORT:=2222}
 
+#CUxD Port
+: ${CCU_CUXD_PORT:=8701}
+
+# XML-RPC Port
+: ${CCU_XML_RPC:=9125}
+
+# BIN-RPC Port 
+: ${CCU_BIN_RPC:=9126}
+
+# WIRED Port
+: ${CCU_WIRED:=2000}
+
+# CCU Autodiscovery (UDP)
+: ${CCU_AUTO:=43439}
+
 #Name of the docker volume where CCU data will persist
 #It can be a local location as well such as a mounted NAS folder, cluster fs (glusterfs), etc.
 : ${DOCKER_CCU_DATA:="ccu_data"}
