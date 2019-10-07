@@ -39,9 +39,8 @@ RUN ln -s / extracted/current \
 
 COPY additions /additions
 
-RUN cp -av --remove-destination /additions/files/* /extracted/
-
-RUN cd extracted/ \
+RUN cp -av --remove-destination /additions/files/* /extracted/ && \
+    cd extracted/ \
     && cat /additions/patches/*|patch -p1
 
 
@@ -51,4 +50,5 @@ COPY LICENSE entrypoint.sh /
 
 CMD ["/entrypoint.sh"]
 VOLUME /usr/local
-EXPOSE 80 22 2001 8181
+EXPOSE 80 22 2001 8181 2000 9125 9126 8701 
+EXPOSE 43439/udp
