@@ -12,7 +12,7 @@ fi
 ##########
 
 # Make sure only root can run our script
-if [[ $EUID -ne 0 ]]; then
+if [ $EUID -ne 0 ]; then
    echo "WARNING: This script should be run as root or with permissions for docker" 1>&2
 fi
 
